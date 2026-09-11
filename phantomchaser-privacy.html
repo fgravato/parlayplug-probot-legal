@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhantomChaser Privacy Policy</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
+  h1 { font-size: 1.6em; }
+  h2 { font-size: 1.2em; margin-top: 1.8em; }
+  code { background: #f2f2f2; padding: 2px 5px; border-radius: 3px; }
+  footer { margin-top: 3em; font-size: 0.85em; color: #666; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy — PhantomChaser</h1>
+<p><strong>Last updated:</strong> September 11, 2026</p>
+
+<p>PhantomChaser ("the bot") is a Discord bot that detects accounts impersonating a server's admins or other protected users. This policy explains what data the bot accesses, stores, and shares.</p>
+
+<h2>Data the bot accesses</h2>
+<ul>
+  <li><strong>Server member information</strong> (via the Server Members Intent) — used to build a profile fingerprint (username, display name, avatar) for members when they join or are scanned, so new accounts can be compared against protected users for impersonation attempts.</li>
+  <li><strong>Message metadata</strong> (via the Message Content Intent) — used to run moderator commands (prefixed with <code>!</code>, e.g. <code>!status</code>, <code>!protected</code>, <code>!config</code>) and to check basic message timing signals (such as whether a message timestamp appears altered). The bot does not read, log, or act on the text of ordinary messages.</li>
+</ul>
+
+<h2>Data storage</h2>
+<p>The bot stores the following in a local database operated by the bot's administrator (not shared with any third party as a data set):</p>
+<ul>
+  <li>User ID, username, display name, and a perceptual hash of the profile avatar — for protected users and, for comparison purposes, for other members of servers the bot protects.</li>
+  <li>Account creation date and server join date.</li>
+  <li>Records of detected impersonation matches (flags), for review by server moderators.</li>
+</ul>
+<p>The bot does not store the content of regular chat messages.</p>
+
+<h2>Third-party processing</h2>
+<p>For borderline impersonation cases, the bot may send a sanitized username and display name (never message content or other personal data) to a third-party AI model to help assess whether a name is a deliberate lookalike. This is used only to compute a risk score and is not used to build user profiles beyond that single check.</p>
+
+<h2>Data sharing</h2>
+<p>The bot does not sell member data. Data is used only to operate impersonation detection within the servers where the bot is installed, and is visible only to that server's moderators through the bot's commands.</p>
+
+<h2>Data retention</h2>
+<p>Fingerprint and flag records are retained for as long as the bot is active in a server, to support ongoing detection. A server administrator can request deletion of a server's data by removing the bot and contacting the operator below.</p>
+
+<h2>Your rights</h2>
+<p>Server administrators may remove the bot from their server at any time, which stops further data collection. Individual users may contact a server's administrators, or the bot operator directly, to request review or removal of their stored fingerprint data.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy can be sent to <a href="mailto:frankie.gravato@gmail.com">frankie.gravato@gmail.com</a>.</p>
+
+<footer>
+  This policy applies only to PhantomChaser and its use of the Discord API.<br>
+  See also the <a href="phantomchaser-terms.html">Terms of Service</a>.
+</footer>
+
+</body>
+</html>
