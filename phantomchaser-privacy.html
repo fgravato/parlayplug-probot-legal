@@ -26,7 +26,7 @@
 </ul>
 
 <h2>Data storage</h2>
-<p>The bot stores the following in a local database operated by the bot's administrator (not shared with any third party as a data set):</p>
+<p>The bot stores the following in a local database operated by the bot's administrator (not shared with any third party as a data set). Username, display name, and avatar hash fields are encrypted at rest.</p>
 <ul>
   <li>User ID, username, display name, and a perceptual hash of the profile avatar — for protected users and, for comparison purposes, for other members of servers the bot protects.</li>
   <li>Account creation date and server join date.</li>
@@ -41,7 +41,7 @@
 <p>The bot does not sell member data. Data is used only to operate impersonation detection within the servers where the bot is installed, and is visible only to that server's moderators through the bot's commands.</p>
 
 <h2>Data retention</h2>
-<p>Fingerprint and flag records are retained for as long as the bot is active in a server, to support ongoing detection. A server administrator can request deletion of a server's data by removing the bot and contacting the operator below.</p>
+<p>Member fingerprint records and resolved impersonation flags are automatically deleted after 30 days. Protected-user (admin) fingerprints are kept only as long as needed for active protection and refresh automatically on each scan. A server administrator can request earlier deletion of a server's data by removing the bot and contacting the operator below.</p>
 
 <h2>Your rights</h2>
 <p>Server administrators may remove the bot from their server at any time, which stops further data collection. Individual users may contact a server's administrators, or the bot operator directly, to request review or removal of their stored fingerprint data.</p>
