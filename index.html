@@ -15,24 +15,25 @@
 <body>
 
 <h1>Privacy Policy — ParlayPlug-Probot</h1>
-<p><strong>Last updated:</strong> September 11, 2026</p>
+<p><strong>Last updated:</strong> October 27, 2026</p>
 
-<p>ParlayPlug-Probot ("the bot") is a Discord bot providing moderation, welcome messages, and utility commands for the servers it is added to. This policy explains what data the bot accesses and how it is used.</p>
+<p>ParlayPlug-Probot ("the bot") is a Discord bot that welcomes new members of The Parlay Plug server and asks them to acknowledge the server rules. It also provides a <code>/ping</code> slash command. This policy explains what data the bot accesses and how it is used.</p>
 
 <h2>Data the bot accesses</h2>
 <ul>
-  <li><strong>Server member information</strong> (via the Server Members Intent) — used to detect when a member joins a server so the bot can send a welcome message.</li>
-  <li><strong>Message content</strong> (via the Message Content Intent) — used only to detect and parse bot commands (e.g. <code>!ping</code>) that begin with the bot's command prefix. Messages that are not commands are not processed or stored.</li>
+  <li><strong>Server member information</strong> (via the Server Members Intent) — when someone joins the server, Discord sends the bot a member-join event containing the member's Discord user ID, username, and membership details. The bot uses the user ID to mention the new member in a rules-acknowledgment prompt and to verify that only that member can click the prompt's button before it posts the full welcome message. This is the only privileged intent the bot uses.</li>
+  <li><strong>Interactions</strong> — when a member clicks the rules button or runs <code>/ping</code>, Discord sends the bot that interaction, including the user ID.</li>
 </ul>
+<p>The bot does not read message content, presence or status, or direct messages.</p>
 
 <h2>Data storage</h2>
-<p>The bot does not store message content, member lists, or personal data in any external database. Any configuration data (such as server-specific settings) is stored only as needed to operate the bot within that server.</p>
+<p>The bot has no database and does not store message content, member lists, or personal data. Member Discord user IDs appear only in the bot's operational logs, which are used for troubleshooting and contain no usernames or message content.</p>
 
 <h2>Data sharing</h2>
 <p>The bot does not sell, share, or transmit any collected data to third parties. Data is used solely to provide the bot's functionality within Discord.</p>
 
 <h2>Data retention</h2>
-<p>The bot does not retain message content or member data beyond what is required to process an event in real time.</p>
+<p>Operational logs are rotated daily and deleted after 7 days. The bot retains no other member data beyond what is needed to process an event in real time.</p>
 
 <h2>Your rights</h2>
 <p>Server administrators may remove the bot from their server at any time, which immediately stops all data access. Individual users may contact a server's administrators to request removal of any bot-related configuration data.</p>
